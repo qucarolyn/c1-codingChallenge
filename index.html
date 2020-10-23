@@ -47,8 +47,12 @@
 		</div>
 		
 		<script>
-		function goButton() {
-		}
+		var url = 'http://newsapi.org/v2/everything?q=Apple&from=2020-10-23&sortBy=popularity&apiKey=0c8eb80d57034257ac618f8fe5a5fc93';
+			var req = new Request(url);
+			fetch(req)
+				.then(function(response) {
+        				console.log(response.json());
+    				})
 		</script>
 		
 		<!--<select name="category" id="category">	
