@@ -37,10 +37,23 @@
   				<option value="Sports">Sports</option>
   				<option value="Technology">Technology</option>
 			</select>
-			<button onclick="document.getElementById('demo').innerHTML=Date()">Go!</button>
+			
+			<button onclick="myFunction()">Go!</button>
+
+			<p id="demo"></p>
+
+			<script>
+				function myFunction() {
+  					document.getElementById("demo").innerHTML = "Hello World";
+				}
+			</script>
 		</div>
 		
 		<script>
+			//this function takes in the category and search keywords in order to get a list of 
+			function getNews(category, search) {
+			}
+			
 		var url = 'http://newsapi.org/v2/everything?' +
           	'q=Apple&' +
           	'from=2020-10-23&' +
