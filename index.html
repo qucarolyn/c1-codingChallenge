@@ -46,6 +46,7 @@
 				function myFunction() {
   					document.getElementById("demo").innerHTML = "Hello World";
 				}
+				
 			</script>
 		</div>
 		
@@ -53,17 +54,20 @@
 			//this function takes in the category and search keywords in order to get a list of 
 			function getNews(category, search) {
 			}
-			
-		var url = 'http://newsapi.org/v2/everything?' +
-          	'q=Apple&' +
-          	'from=2020-10-23&' +
-          	'sortBy=popularity&' +
-          	'apiKey=0c8eb80d57034257ac618f8fe5a5fc93';			
+			var url = 'http://newsapi.org/v2/everything?' +
+          			'q=Apple&' +
+          			'from=2020-10-30&' +
+          			'sortBy=popularity&' +
+          			'apiKey=78b9d599c4f94f8fa3afb1a5458928d6';
+
 			var req = new Request(url);
+
 			fetch(req)
-				.then(function(response) {
-        				console.log(response.json());
-    				})
+    				.then(function(response) {
+        			console.log(response.json());
+    			})
+
+
 		</script>
 		
 		
