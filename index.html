@@ -41,6 +41,28 @@
 			<button onclick="myFunction()">Go!</button>
 
 			<p id="demo"></p>
+			
+			<script>
+				//this function takes in the category and search keywords in order to get a list of 
+				function getNews(category, search) {
+				}
+				var url = 'http://newsapi.org/v2/everything?' +
+          				'q=Apple&' +
+          				'from=2020-10-30&' +
+          				'sortBy=popularity&' +
+          				'apiKey=78b9d599c4f94f8fa3afb1a5458928d6';
+
+				var req = new Request(url);
+
+				fetch(req)
+    					.then(function(response) {
+					var jsonStr = JSON.stringify(response.json());
+
+        				console.log(response.json());
+   				 })
+				
+
+		</script>
 
 			<script>
 				function myFunction() {
@@ -50,26 +72,7 @@
 			</script>
 		</div>
 		
-		<script>
-			//this function takes in the category and search keywords in order to get a list of 
-			function getNews(category, search) {
-			}
-			var url = 'http://newsapi.org/v2/everything?' +
-          			'q=Apple&' +
-          			'from=2020-10-30&' +
-          			'sortBy=popularity&' +
-          			'apiKey=78b9d599c4f94f8fa3afb1a5458928d6';
-
-			var req = new Request(url);
-
-			fetch(req)
-    				.then(function(response) {
-				var jsonData = response.json());
-    			})
-			var jsonStr = JSON.stringify(jsonData);
-
-
-		</script>
+		
 		
 		
 		
