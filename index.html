@@ -40,7 +40,7 @@
 			
 			<button onclick="myFunction()">Go!</button>
 
-			<p id="demo"></p>
+  			<div id="myData"></div>
 			
 			<script>
 				//this function takes in the category and search keywords in order to get a list of 
@@ -60,10 +60,21 @@
 						jsonStr = response.json(); 
         					console.log(jsonStr);
    				 	})
+				var mainContainer = document.getElementById("myData");
+				for (var i = 0; i < articles.length; i++) {
+					var div = document.createElement("div");
+					div.innerHTML = articles[i].title;
+					mainContainer.appendChild(div);
+
+					
+
+
+  				// append each person to our page
+				}
 				
 				function myFunction() {
 					
-  					document.getElementById("demo").innerHTML = "hello" + jsonStr;
+  					document.getElementById("myData").innerHTML = "hello" + jsonStr;
 				}
 				
 
