@@ -53,18 +53,17 @@
           				'apiKey=78b9d599c4f94f8fa3afb1a5458928d6';
 
 				var req = new Request(url);
-				var jasonStr; 
+				var jsonStr; 
 
 				fetch(req)
     					.then(function(response) {
-					//jsonStr = JSON.stringify(response.json());
-
-        				console.log(response.json());
-   				 })
+						jsonStr = response.json(); 
+        					console.log(jsonStr);
+   				 	})
 				
 				function myFunction() {
 					
-  					document.getElementById("demo").innerHTML = "hello";
+  					document.getElementById("demo").innerHTML = "hello" + jsonStr;
 				}
 				
 
