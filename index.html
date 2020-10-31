@@ -60,17 +60,14 @@
 						jsonStr = response.json(); 
         					console.log(jsonStr);
    				 	})
+				var myArticles = jsonStr.articles;
 				var mainContainer = document.getElementById("myData");
-				for (var i = 0; i < jsonStr.articles.length; i++) {
+				for ( var i in myArticles) {
 					var div = document.createElement("div");
 					div.innerHTML = articles[i].title;
 					mainContainer.appendChild(div);
-
-					
-
-
-  				// append each person to our page
 				}
+				
 				
 				function myFunction() {
 					
