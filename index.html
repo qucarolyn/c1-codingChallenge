@@ -60,7 +60,7 @@
 						jsonStr = response.json(); 
         					console.log(jsonStr);
    				 	})
-				var myArticles = jsonStr.articles;
+				var myArticles = jsonStr.object.articles;
 				var mainContainer = document.getElementById("myData");
 				for ( var i in myArticles) {
 					var div = document.createElement("div");
