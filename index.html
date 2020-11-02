@@ -57,7 +57,9 @@
 
 				fetch(req)
     					.then(function(response) {
-						jsonStr = response.json(); 
+						jsonStr = response.json().then(function(json) {
+      							// process your JSON further
+						}); 
         					console.log(jsonStr);
    				 	})
 				var myArticles = jsonStr[0];
