@@ -60,9 +60,9 @@
     					.then(function(response) {
 						response.json().then(data => {
 							console.log(data); 
-							var myArticles = data[0]; 
+							var myArticles = data.articles; 
 							var mainContainer = document.getElementById("myData");
-							for ( var i in myArticles) {
+							for (var i in myArticles) {
 								var div = document.createElement("div");
 								div.innerHTML = articles[i].title;
 								mainContainer.appendChild(div);
@@ -83,10 +83,10 @@
 				}*/
 				
 				
-				function myFunction() {
+				/*function myFunction() {
 					
   					document.getElementById("myData").innerHTML = "hello" + jsonStr;
-				}
+				}*/
 				
 
 		</script>
