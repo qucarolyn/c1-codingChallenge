@@ -71,7 +71,8 @@
     					.then(function(response) {
 						response.json().then(data => {
 							console.log(data); 
-							var myArticles = data[2]; 
+							var obj = JSON.parse(data)
+							var myArticles = obj[2]; 
 							var toAdd; 
 							var mainContainer = document.getElementById("myData");
 							for (var i in myArticles) {
