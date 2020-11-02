@@ -72,11 +72,12 @@
 						response.json().then(data => {
 							console.log(data); 
 							var myArticles = data[2]; 
+							var toAdd; 
 							var mainContainer = document.getElementById("myData");
 							for (var i in myArticles) {
 								var div = document.createElement("div");
 								div.innerHTML = articles[i].title;
-								mainContainer.appendChild(div);
+								myData.appendChild(div);
 							}
   							// do something with your data
 						});
