@@ -53,14 +53,14 @@
           				'apiKey=78b9d599c4f94f8fa3afb1a5458928d6';
 
 				var req = new Request(url);
-				var jsonStr; 
+				var data; 
 
 				fetch(req)
     					.then(function(response) {
 						jsonStr = response.json(); 
         					console.log(jsonStr);
    				 	})
-				var myArticles = jsonStr.object.articles;
+				var myArticles = jsonStr[0];
 				var mainContainer = document.getElementById("myData");
 				for ( var i in myArticles) {
 					var div = document.createElement("div");
