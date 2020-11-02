@@ -56,7 +56,18 @@
 				var jsonStr;
 				var myArticles
 
-				fetch(req)
+				
+				/*var myArticles = jsonStr[0];
+				var mainContainer = document.getElementById("myData");
+				for ( var i in myArticles) {
+					var div = document.createElement("div");
+					div.innerHTML = articles[i].title;
+					mainContainer.appendChild(div);
+				}*/
+				
+				
+				function myFunction() {
+					fetch(req)
     					.then(function(response) {
 						response.json().then(data => {
 							console.log(data); 
@@ -74,19 +85,7 @@
 						//}); 
         					//console.log(jsonStr);
    				 	})
-				/*var myArticles = jsonStr[0];
-				var mainContainer = document.getElementById("myData");
-				for ( var i in myArticles) {
-					var div = document.createElement("div");
-					div.innerHTML = articles[i].title;
-					mainContainer.appendChild(div);
-				}*/
-				
-				
-				/*function myFunction() {
-					
-  					document.getElementById("myData").innerHTML = "hello" + jsonStr;
-				}*/
+				}
 				
 
 		</script>
