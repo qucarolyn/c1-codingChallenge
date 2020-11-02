@@ -60,7 +60,7 @@
     					.then(function(response) {
 						response.json().then(data => {
 							console.log(data); 
-							var myArticles = data.articles; 
+							var myArticles = data[2]; 
 							var mainContainer = document.getElementById("myData");
 							for (var i in myArticles) {
 								var div = document.createElement("div");
