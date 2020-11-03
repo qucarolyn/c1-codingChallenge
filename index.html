@@ -23,17 +23,15 @@
 		
 		
 		<div class="container">
-    		<div class="blurb">
         		<h1>News Today!</h1>
 				<p>Search for entertainment, sports, and technology news  </p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
+    		</div>
 		
 		<div class="searchBar">
 			<form class="search" action=""> 
 				<label for="">News</label>
 				<input class="input" type="text" placeholder="Search for news..."/> </br>
-				<input type="Go!" />
+				<input type="submit" />
 			</form>
 			
 			
@@ -45,13 +43,23 @@
   				<option value="Technology">Technology</option>
 			</select> !-->
 			
-			<button onclick="myFunction()">Go!</button>
-
-  			<div id="myData"></div>
+			<!-- <button onclick="myFunction()">Go!</button> -->
 			
 			<script>
+				const searchFrom = document.querySelector('.search'); 
+				const input = document.querySelector('.input');
+				const newsList = document.querySelector('.news-list');
+				
+				searchFrom.addEventListener('submit', getNews);
+				
+				function getNews(e){
+					const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
+					let searchedFor = input.value; 
+					console.log(searchedFor);
+				}
+				
 				//this function takes in the category and search keywords in order to get a list of 
-				function getNews(category, search) {
+				/* function getNews(category, search) {
 				}
 				var url = 'https://newsapi.org/v2/everything?' +
           				'q=Apple&' +
@@ -64,7 +72,7 @@
 				var myArticles
 
 				
-				/*var myArticles = jsonStr[0];
+				var myArticles = jsonStr[0];
 				var mainContainer = document.getElementById("myData");
 				for ( var i in myArticles) {
 					var div = document.createElement("div");
@@ -73,7 +81,7 @@
 				}*/
 				
 				
-				function myFunction() {
+				/*function myFunction() {
 					fetch(req)
     					.then(function(response) {
 						response.json().then(data => {
@@ -94,13 +102,17 @@
 						//}); 
         					//console.log(jsonStr);
    				 	})
-				}
+				}*/
 				
 
 		</script>
 			
 		</div>
 		
+		<div class="container">
+			<ul class="class-list"></ul>
+		</div>
+	
 		
 		
 		
