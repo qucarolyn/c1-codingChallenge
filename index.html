@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- newsAPI code with help from "JavaScript Fetch API: Interacting With The News API" by Connor Bailey (https://www.youtube.com/watch?v=fOSGazKFRYE) -->
 <html>
 	<head>
 		<title>News Today</title>
@@ -13,7 +14,7 @@
 	<body>
 		<div class="topnav">
 			<a class="active" href="#home">Home</a>
-			<a href=""> See top news in</a>
+			<a href=""> See top news in... </a>
   			<a href="#entertainment">Entertainment</a>
   			<a href="#sports">Sports</a>
   			<a href="#technology">Technology</a>
@@ -53,8 +54,8 @@
 				//let url = 'https://newsapi.org/v2/everything?q=$(searchedFor)&apiKey=$(apiKey)';
 
 				var url = 'https://newsapi.org/v2/everything?' +
-          				'q=' + searchedFor + 
-          				'&from=2020-10-30&' +
+          				'q=' + searchedFor + '&' + 
+          				//'from=2020-10-30&' +
           				'sortBy=popularity&' +
           				'apiKey=' + apiKey;
 				
