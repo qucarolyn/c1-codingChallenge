@@ -29,6 +29,7 @@
 			searchFrom.addEventListener('submit', getNews);
 				
 			function getNews(e){
+				e.preventDefault(); 
 				const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
 				let searchedFor = input.value; 
 				console.log(searchedFor);
