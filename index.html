@@ -11,7 +11,32 @@
 	</head>
 	
 	<body>
-		<nav>
+		<form class="search" action=""> 
+			<label for="">News</label>
+			<input class="input" type="text" placeholder="Search for news..."/>
+			<input type="submit" />
+		</form>
+		
+		<div class="container">
+			<ul class="class-list"></ul>
+		</div>
+		
+		<script>
+			const searchFrom = document.querySelector('.search'); 
+			const input = document.querySelector('.input');
+			const newsList = document.querySelector('.news-list');
+				
+			searchFrom.addEventListener('submit', getNews);
+				
+			function getNews(e){
+				const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
+				let searchedFor = input.value; 
+				console.log(searchedFor);
+			}
+		</script>
+		
+		
+		<!--<nav>
     		<ul>
 			<li><a href="">Search</a><li>
 			<li>See top news in...<li>
@@ -25,12 +50,12 @@
 		<div class="container">
         		<h1>News Today!</h1>
 				<p>Search for entertainment, sports, and technology news  </p>
-    		</div>
+    		</div>-->
 		
-		<div class="searchBar">
+		<!--<div class="searchBar">
 			<form class="search" action=""> 
 				<label for="">News</label>
-				<input class="input" type="text" placeholder="Search for news..."/> </br>
+			<input class="input" type="text" placeholder="Search for news..."/> </br>
 				<input type="submit" />
 			</form>
 			
@@ -44,9 +69,9 @@
 			</select> !-->
 			
 			<!-- <button onclick="myFunction()">Go!</button> -->
-			
+		
 			<script>
-				const searchFrom = document.querySelector('.search'); 
+				/*const searchFrom = document.querySelector('.search'); 
 				const input = document.querySelector('.input');
 				const newsList = document.querySelector('.news-list');
 				
@@ -59,7 +84,7 @@
 				}
 				
 				//this function takes in the category and search keywords in order to get a list of 
-				/* function getNews(category, search) {
+				 function getNews(category, search) {
 				}
 				var url = 'https://newsapi.org/v2/everything?' +
           				'q=Apple&' +
@@ -107,17 +132,10 @@
 
 		</script>
 			
-		</div>
-		
-		<div class="container">
-			<ul class="class-list"></ul>
-		</div>
-	
-		
-		
-		
-		
-		
+		<!-- </div> -->
+	</body>
+			
+			
 		<footer>
     		<ul>
         		<li>
