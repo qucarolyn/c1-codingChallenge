@@ -36,10 +36,40 @@
 				
 			function getNews(e){
 				e.preventDefault(); 
+				
 				const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
 				let searchedFor = input.value; 
 				console.log(searchedFor);
+				
+				let url = 'https://newsapi.org/v2/everything?q=$(searchedFor)&apiKey=$(apiKey)';
+
+				/*let url = 'http://newsapi.org/v2/everything?' +
+          			'q=Apple&' + searchedFor + 
+          			'from=2020-11-04&' +
+          			'sortBy=popularity&' +
+          			'apiKey=0c8eb80d57034257ac618f8fe5a5fc93';*/
+				
+				var req = new Request(url);
+				
+				fetch(req)
+    					.then(function(response) {
+						response.json().then(data => {
+							console.log(data); 
+    				})
 			}
+			
+			/*var url = 'http://newsapi.org/v2/everything?' +
+          			'q=Apple&' +
+          			'from=2020-11-04&' +
+          			'sortBy=popularity&' +
+          			'apiKey=0c8eb80d57034257ac618f8fe5a5fc93';
+
+			var req = new Request(url);
+
+			fetch(req)
+   			.then(function(response) {
+        			return response.json();
+    			})*/
 		</script>
 		
 		
