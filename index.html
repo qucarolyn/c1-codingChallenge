@@ -50,6 +50,8 @@
           			'apiKey=0c8eb80d57034257ac618f8fe5a5fc93';*/
 				
 				var req = new Request(url);
+				
+				fetch(req)
 				.then(function(response) {
 						response.json().then(data => {
 							console.log(data); 
