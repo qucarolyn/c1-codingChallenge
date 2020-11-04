@@ -54,7 +54,18 @@
 				fetch(req)
 				.then(function(response) {
 						response.json().then(data => {
-							console.log(data); 
+							console.log(data);
+							data.articles.forEach(article =>{
+								document.createElement('li');
+								let li = docuemtn.createElement('li');
+								let a = document.createElement('a');
+								a.setAttribute('href', article.url);
+								a.setAttribute('target', '_blank');
+								a.textContent = article.title;
+								li.appendChild(a); 
+								newsList.appendChild(li);
+								
+							})
 							//var obj = JSON.parse(data)
   							// do something with your data
 						});
