@@ -85,9 +85,13 @@
 								let img = document.createElement('img');
 								img.src = article.urlToImage; 
 								img.alt = "Icon for article"; 
+								
+								let info = document.createElement('p');
+								info.textContent = 'Source: ' + article.source.name;
 							
-								li.appendChild(a); 
-								//li.appendChild(img); 
+								li.appendChild(a);
+								li.appendChild(info);
+								li.appendChild(img); 
 								newsList.appendChild(li);
 								
 							})
