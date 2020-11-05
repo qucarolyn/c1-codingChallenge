@@ -20,6 +20,11 @@
   			<a href="#technology">Technology</a>
 		</div>
 			
+		<div class="container">
+        		<h1>News Today!</h1>
+				<p>Search for entertainment, sports, and technology news  </p>
+    		</div>
+		
 		<form class="search" action=""> 
 			<label for="">News</label>
 			<input class="input" type="text"/>
@@ -29,147 +34,15 @@
   				<option value="sports">Sports</option>
   				<option value="technology">Technology</option>
 			</select>
-			<input type="submit" />
+			<input type="go" Go!/>
 		</form>
 		
 		<div class="container">
 			<ul class="news-list"></ul>
 		</div>
 		
-		<script>
-			const searchFrom = document.querySelector('.search'); 
-			const input = document.querySelector('.input');
-			const category = document.getElementById("category");
-			const newsList = document.querySelector('.news-list');
-				
-			searchFrom.addEventListener('submit', getNews);
-				
-			function getNews(e){
-				newsList.innerHTML = '';
-				e.preventDefault(); 
-				
-				const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
-				let searchedFor = input.value;
-				
-				let myCategory = category.value; 
-				
-				if(myCategory == 'choose') {
-					myCategory = 'sports';
-				}
-				console.log(searchedFor);
-				
-				var url = 'https://newsapi.org/v2/top-headlines?' +
-				    	'country=us&' + 
-				    	'category=' + myCategory + '&' + 
-          				'q=' + searchedFor + '&' + 
-          				//'from=2020-10-30&' +
-          				'sortBy=popularity&' +
-          				'apiKey=' + apiKey; 
-				console.log(url); 
-				
-				var req = new Request(url);
-				
-				fetch(req)
-				.then(function(response) {
-						response.json().then(data => {
-							console.log(data);
-							data.articles.forEach(article =>{
-								document.createElement('li');
-								let li = document.createElement('li');
-								
-								if(article.title != 'null') {
-									let a = document.createElement('a');
-									a.setAttribute('href', article.url);
-									a.setAttribute('target', '_blank');
-									a.textContent = article.title;
-									li.appendChild(a);
-								   }
-								
-								let img = document.createElement('img');
-								img.alt = "Icon for article";
-								if(article.img != 'null') {
-									img.src = article.urlToImage; 
-								} else {
-									img.src = article.urlToImage; //need to fix later
-								}
-								li.appendChild(img);
-								
-								
-								let src = ''; 
-								if (article.source.name != 'null') {
-									src = 'Source: ' + article.source.name; 
-								}
-								let auth = ''; 
-								if (article.author != 'null') {
-									' | Author: ' + article.author;
-								}
-								
-								
-								if(src + auth != '') {
-									let info = document.createElement('p');
-
-									info.textContent = src + auth;
-									li.appendChild(info);
-								}
-								   
-								newsList.appendChild(li);
-								
-							})
-							//var obj = JSON.parse(data)
-  							// do something with your data
-						});
-
-   				 	});
-			}
-			
-			/*var url = 'http://newsapi.org/v2/everything?' +
-          			'q=Apple&' +
-          			'from=2020-11-04&' +
-          			'sortBy=popularity&' +
-          			'apiKey=0c8eb80d57034257ac618f8fe5a5fc93';
-
-			var req = new Request(url);
-
-			fetch(req)
-   			.then(function(response) {
-        			return response.json();
-    			})*/
-		</script>
+		<script src="javasript/main.js"></script>
 		
-		
-		<!--<nav>
-    		<ul>
-			<li><a href="">Search</a><li>
-			<li>See top news in...<li>
-	        	<li><a href="html/browse.html">Entertainment</a></li>
-        		<li><a href="html/browse.html">Sports</a></li>
-        		<li><a href="html/browse.html">Technology</a></li>
-    		</ul>
-		</nav>
-		
-		
-		<div class="container">
-        		<h1>News Today!</h1>
-				<p>Search for entertainment, sports, and technology news  </p>
-    		</div>-->
-		
-		<!--<div class="searchBar">
-			<form class="search" action=""> 
-				<label for="">News</label>
-			<input class="input" type="text" placeholder="Search for news..."/> </br>
-				<input type="submit" />
-			</form>
-			
-			
- 			<!-- <input type="text" placeholder="Search for news...">
-			<select name="category" id="category">	
-				<option value="choose">Choose a category...</option>
- 				<option value="Entertainment">Entertainment</option>
-  				<option value="Sports">Sports</option>
-  				<option value="Technology">Technology</option>
-			</select> !-->
-			
-			<!-- <button onclick="myFunction()">Go!</button> -->
 		
 			<script>
 				/*const searchFrom = document.querySelector('.search'); 
@@ -233,14 +106,12 @@
 
 		</script>
 			
-		<!-- </div> -->
 	</body>
-			
-			
-		<footer>
-    		<ul>
-        		<li>
+	
+	<footer>
+		<ul>
+			<li>
 			<li><a href="mailto:qu.carolyn@gmail.com.com">email</a></li>
-        		<li><a href="https://github.com/qucarolyn">github.com/qucarolyn</a></li>
+			<li><a href="https://github.com/qucarolyn">github.com/qucarolyn</a></li>
 		</ul>
-		<footer>	
+	</footer>	
