@@ -49,15 +49,15 @@ function getSearch(e){
 				
 	let searchedFor = input.value;
 	
-	let searchCategory = searchCategory.value; 		
-	if(searchCategory == 'choose') {
-		searchCategory = 'sports';
+	let searchCat = searchCategory.value; 		
+	if(searchCat == 'choose') {
+		searchCat = 'sports';
 	}
 	console.log(searchedFor);
 				
 	var url = 'https://newsapi.org/v2/everything?' +
 	    'country=us&' + 
-	    'category=' + searchCategory + '&' + 
+	    'category=' + searchCat + '&' + 
 	    'q=' + searchedFor + '&' + 
 	    'sortBy=popularity&' +
 	    'apiKey=' + apiKey; 
