@@ -55,7 +55,7 @@
 
 				var url = 'https://newsapi.org/v2/sources?' +
           				'q=' + searchedFor + '&' + 
-				    	'category=' + 'sports' + '&' +
+				    	'country=us&category=technology &' + 
           				//'from=2020-10-30&' +
           				'sortBy=popularity&' +
           				'apiKey=' + apiKey; 
@@ -81,12 +81,12 @@
 								a.setAttribute('target', '_blank');
 								a.textContent = source.title;
 								
-								let img = document.createElement('img');
-								img.src = source.urlToImage; 
+								//let img = document.createElement('img');
+								//img.src = source.urlToImage; 
 								img.alt = "Icon for article"; 
 							
 								li.appendChild(a); 
-								li.appendChild(img); 
+								//li.appendChild(img); 
 								newsList.appendChild(li);
 								
 							})
