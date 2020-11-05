@@ -53,13 +53,11 @@
 				
 				let myCategory = category.value; 
 				
-				if(myCategory == 'Choose a category') {
+				if(myCategory == 'choose') {
 					myCategory = 'sports';
 				}
 				console.log(searchedFor);
 				
-				//let url = 'https://newsapi.org/v2/everything?q=$(searchedFor)&apiKey=$(apiKey)';
-
 				var url = 'https://newsapi.org/v2/top-headlines?' +
 				    	'category=' + myCategory + '&' + 
           				'q=' + searchedFor + '&' + 
@@ -67,13 +65,6 @@
           				'sortBy=popularity&' +
           				'apiKey=' + apiKey; 
 				console.log(url); 
-				
-				/*var url = 'https://newsapi.org/v2/everything?' +
-          				'q=' + searchedFor + '&' + 
-				    	//'category=' + 'sports' + '&' +
-          				//'from=2020-10-30&' +
-          				'sortBy=popularity&' +
-          				'apiKey=' + apiKey;*/
 				
 				var req = new Request(url);
 				
