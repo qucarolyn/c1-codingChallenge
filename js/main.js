@@ -15,6 +15,7 @@ function top_e(e) {
 	e.preventDefault();
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
+	    'country=us&' + 
 	    'category=entertainment&' + 
 	    'apiKey=' + apiKey;
 	
@@ -26,6 +27,7 @@ function top_s(e) {
 	e.preventDefault();
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
+	    'country=us&' + 
 	    'category=sports&' + 
 	    'apiKey=' + apiKey;
 	
@@ -37,6 +39,7 @@ function top_t(e) {
 	e.preventDefault();
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
+	    'country=us&' + 
 	    'category=technology&' + 
 	    'apiKey=' + apiKey;
 	
@@ -49,9 +52,9 @@ function getSearch(e){
 				
 	let searchedFor = input.value;
 	
-	let searchCat = searchCategory.value; 		
-	if(searchCat == 'choose') {
-		searchCat = 'sports';
+	let searchCategory = searchCategory.value; 		
+	if(searchCategory == 'choose') {
+		searchCategory = 'sports';
 	}
 	console.log(searchedFor);
 				
