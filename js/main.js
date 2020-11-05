@@ -9,6 +9,7 @@ searchFrom.addEventListener('submit', getSearch);
 document.getElementById("top_entertainment").addEventListener('click' , top_e);
 document.getElementById("top_sports").addEventListener('click' , top_s);
 document.getElementById("top_technology").addEventListener('click' , top_t);
+document.getElementById("top_technology").addEventListener('click' , clear);
 
 function top_e(e) {
 	newsList.innerHTML = '';
@@ -44,6 +45,10 @@ function top_t(e) {
 	    'apiKey=' + apiKey;
 	
 	getNews(url);
+}
+
+function clear(e){
+	newsList.innerHTML = '';
 }
 
 function getSearch(e){
