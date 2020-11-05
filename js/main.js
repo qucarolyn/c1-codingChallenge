@@ -1,7 +1,7 @@
 const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
 const searchFrom = document.querySelector('.search'); 
 const input = document.querySelector('.input');
-const searchCategory = document.getElementById("category");
+const searchCategory = document.getElementById("searchCategory");
 const newsList = document.querySelector('.news-list');
 
 searchFrom.addEventListener('submit', getSearch);
