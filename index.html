@@ -39,6 +39,7 @@
 		<script>
 			const searchFrom = document.querySelector('.search'); 
 			const input = document.querySelector('.input');
+			const category = document.querySelector('.select');
 			const newsList = document.querySelector('.news-list');
 				
 			searchFrom.addEventListener('submit', getNews);
@@ -50,7 +51,7 @@
 				const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
 				let searchedFor = input.value;
 				
-				let myCategory = select.value; 
+				let myCategory = category.value; 
 				
 				if(myCategory == 'Choose a category') {
 					myCategory = 'sports';
