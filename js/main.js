@@ -55,7 +55,7 @@ function getSearch(e){
 	}
 	console.log(searchedFor);
 				
-	var url = 'https://newsapi.org/v2/everything?' +
+	var url = 'https://newsapi.org/v2/top-headlines?' +
 	    'country=us&' + 
 	    'category=' + searchCat + '&' + 
 	    'q=' + searchedFor + '&' + 
