@@ -87,7 +87,10 @@
 								img.alt = "Icon for article"; 
 								
 								let info = document.createElement('p');
-								info.textContent = 'Source: ' + article.source.name;
+
+								info.textContent = 'Source: ' + 
+									<a style = "white-space:nowrap; "href=article.source.info>article.source.name</a> + 
+									' Author: ' + article.author;
 							
 								li.appendChild(a);
 								li.appendChild(info);
