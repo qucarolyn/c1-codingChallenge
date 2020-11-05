@@ -1,26 +1,36 @@
+const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
+//const category
 const searchFrom = document.querySelector('.search'); 
 const input = document.querySelector('.input');
-const category = document.getElementById("category");
+const searchCategory = document.getElementById("searchCategory");
 const newsList = document.querySelector('.news-list');
 				
 searchFrom.addEventListener('submit', getNews);
+
+function topNews(e) {
+	newsList.innerHTML = '';
+	e.preventDefault(); 
+	
+	var url = 'https://newsapi.org/v2/top-headlines?' + 
+	    'category=' + 
+	    '&apiKey=' + apiKey;
+}
 				
 function getNews(e){
 	newsList.innerHTML = '';
 	e.preventDefault(); 			
 				
-	const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
 	let searchedFor = input.value;
 	
-	let myCategory = category.value; 		
-	if(myCategory == 'choose') {
-		myCategory = 'sports';
+	let searchCategory = searchCategory.value; 		
+	if(searchCategory == 'choose') {
+		searchCategory = 'sports';
 	}
 	console.log(searchedFor);
 				
-	var url = 'https://newsapi.org/v2/top-headlines?' +
+	var url = 'https://newsapi.org/v2/everything?' +
 	    'country=us&' + 
-	    'category=' + myCategory + '&' + 
+	    'category=' + searchCategory + '&' + 
 	    'q=' + searchedFor + '&' + 
 	    'sortBy=popularity&' +
 	    'apiKey=' + apiKey; 
