@@ -3,7 +3,7 @@ const input = document.querySelector('.input');
 const category = document.getElementById("category");
 const newsList = document.querySelector('.news-list');
 				
-searchFrom.addEventListener('go', getNews);
+searchFrom.addEventListener('submit', getNews);
 				
 function getNews(e){
 	newsList.innerHTML = '';
