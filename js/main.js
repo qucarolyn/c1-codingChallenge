@@ -1,22 +1,49 @@
 const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
-//const category
 const searchFrom = document.querySelector('.search'); 
 const input = document.querySelector('.input');
 const searchCategory = document.getElementById("searchCategory");
 const newsList = document.querySelector('.news-list');
-				
-searchFrom.addEventListener('submit', getNews);
 
-function topNews(e) {
+searchFrom.addEventListener('submit', getSearch);
+				
+document.getElementById("top_entertainment").addEventListener('click' , top_e);
+document.getElementById("top_sports").addEventListener('click' , top_s);
+document.getElementById("top_technology").addEventListener('click' , top_t);
+
+function top_e(e) {
 	newsList.innerHTML = '';
-	e.preventDefault(); 
+	e.preventDefault();
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
-	    'category=' + 
-	    '&apiKey=' + apiKey;
+	    'category=entertainment&' + 
+	    'apiKey=' + apiKey;
+	
+	getNews(url);
 }
-				
-function getNews(e){
+
+function top_s(e) {
+	newsList.innerHTML = '';
+	e.preventDefault();
+	
+	var url = 'https://newsapi.org/v2/top-headlines?' + 
+	    'category=sports&' + 
+	    'apiKey=' + apiKey;
+	
+	getNews(url);
+}
+
+function top_t(e) {
+	newsList.innerHTML = '';
+	e.preventDefault();
+	
+	var url = 'https://newsapi.org/v2/top-headlines?' + 
+	    'category=technology&' + 
+	    'apiKey=' + apiKey;
+	
+	getNews(url);
+}
+
+function getSearch(e){
 	newsList.innerHTML = '';
 	e.preventDefault(); 			
 				
@@ -36,6 +63,12 @@ function getNews(e){
 	    'apiKey=' + apiKey; 
 	
 	console.log(url); 
+	
+	getNews(url);
+	
+}
+
+function getNews(url){
 	var req = new Request(url);
 	
 	fetch(req).then(function(response) {
@@ -83,3 +116,4 @@ function getNews(e){
 		});
 	});
 }
+				
