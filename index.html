@@ -74,7 +74,7 @@
 				.then(function(response) {
 						response.json().then(data => {
 							console.log(data);
-							data.article.forEach(article =>{
+							data.articles.forEach(article =>{
 								document.createElement('li');
 								let li = document.createElement('li');
 								let a = document.createElement('a');
