@@ -53,7 +53,7 @@
 				
 				//let url = 'https://newsapi.org/v2/everything?q=$(searchedFor)&apiKey=$(apiKey)';
 
-				var url = 'https://newsapi.org/v2/sources?' +
+				var url = 'https://newsapi.org/v2/articles?' +
           				'q=' + searchedFor + '&' + 
 				    	'country=us&category=technology&' + 
           				//'from=2020-10-30&' +
@@ -73,16 +73,16 @@
 				.then(function(response) {
 						response.json().then(data => {
 							console.log(data);
-							data.sources.forEach(source =>{
+							data.article.forEach(source =>{
 								document.createElement('li');
 								let li = document.createElement('li');
 								let a = document.createElement('a');
-								a.setAttribute('href', source.url);
+								a.setAttribute('href', article.url);
 								a.setAttribute('target', '_blank');
-								a.textContent = source.title;
+								a.textContent = article.title;
 								
-								//let img = document.createElement('img');
-								//img.src = source.urlToImage; 
+								let img = document.createElement('img');
+								img.src = source.urlToImage; 
 								img.alt = "Icon for article"; 
 							
 								li.appendChild(a); 
