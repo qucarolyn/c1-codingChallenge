@@ -86,6 +86,10 @@ function getNews(url){
 	fetch(req).then(function(response) {
 		response.json().then(data => {
 			console.log(data);
+			if(data.totalResults == 0) {
+				newsList.innerHTML = 'Could not find any results. Please try again!';
+			}
+			
 			data.articles.forEach(article => {
 				document.createElement('li');
 				let li = document.createElement('li');
