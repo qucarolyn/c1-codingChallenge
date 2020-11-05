@@ -48,7 +48,11 @@ function top_t(e) {
 }
 
 function clear(e){
-	newsList.innerHTML = '';
+	while(newsList.hasChildNodes()){
+		newsList.removeChild('li');
+	}
+	//newsList.innerHTML = '';
+	//e.preventDefault();
 }
 
 function getSearch(e){
