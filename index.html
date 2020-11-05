@@ -48,13 +48,19 @@
 				e.preventDefault(); 
 				
 				const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
-				let searchedFor = input.value; 
+				let searchedFor = input.value;
+				
+				let myCategory = select.value; 
+				
+				if(myCategory == 'Choose a category') {
+					myCategory = 'sports';
+				}
 				console.log(searchedFor);
 				
 				//let url = 'https://newsapi.org/v2/everything?q=$(searchedFor)&apiKey=$(apiKey)';
 
 				var url = 'https://newsapi.org/v2/top-headlines?' +
-				    	'category=technology&' + 
+				    	'category=' + myCategory + '&' + 
           				'q=' + searchedFor + '&' + 
           				//'from=2020-10-30&' +
           				'sortBy=popularity&' +
