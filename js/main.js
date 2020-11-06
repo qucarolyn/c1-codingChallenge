@@ -74,7 +74,7 @@ function update_page(clicked) {
 	document.getElementById("top_sports").style.backgroundColor="grey";
 	document.getElementById("top_technology").style.backgroundColor="grey";
 	
-	document.getElementById(clicked).style.backgroundColor=#35A1DF;
+	document.getElementById(clicked).style.backgroundColor= "rgb(53, 161, 223)";
 }
 
 function getSearch(e){
