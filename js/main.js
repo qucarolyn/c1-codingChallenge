@@ -65,12 +65,8 @@ function getSearch(e){
 	let searchCategory = category.value; 		
 	if(searchCategory == 'choose') { //handles no search category 
 		searchCategory = 'sports';
-	}
-	
-	let sortPage = sortBy.value;
-	if(sortPage == 'choose') { //handles the result sort option
-		sortPage = 'relevancy';
 	}else {
+		let sortPage = sortBy.value;
 		var url = 'https://newsapi.org/v2/top-headlines?' +
 		    'sortBy=' + sortPage + '&' +
 		    'category=' + searchCategory + '&' + 
@@ -78,7 +74,8 @@ function getSearch(e){
 		    'apiKey=' + apiKey; 
 		console.log(url); 
 		getNews(url);	
-	}   
+	}
+	  
 	console.log(searchedFor);
 			
 }
