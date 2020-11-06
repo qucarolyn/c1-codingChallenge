@@ -64,8 +64,9 @@ function getSearch(e){
 	
 	let searchCategory = category.value; 		
 	if(searchCategory == 'choose') { //handles no search category 
-		searchCategory = 'sports';
+		document.getElementById("noCategory").style.display = "block";
 	}else {
+		document.getElementById("noCategory").style.display = "none";
 		let sortPage = sortBy.value;
 		var url = 'https://newsapi.org/v2/top-headlines?' +
 		    'sortBy=' + sortPage + '&' +
@@ -87,7 +88,7 @@ function getNews(url){
 		response.json().then(data => {
 			console.log(data);
 			if(data.totalResults == 0) {
-				document.getElementById("noCategory").style.display = "block";
+				newsList.innerHTML = 'Could not find any results. Please adjust your search!';
 			}
 			
 			data.articles.forEach(article => {
