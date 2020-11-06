@@ -21,19 +21,6 @@ topnav button {
     padding: 10px 30px;
 }
 
-
-footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-
-footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
 a {
     text-decoration: none;
     color: #999;
@@ -53,10 +40,6 @@ p {
     line-height: 1.4em;
     color: #333;
 }
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
 
 news-list li div{
     width: 300px;
@@ -73,6 +56,23 @@ news-list li div img{
     padding: 50px;
     margin: 20px;
     
+}
+
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
 
