@@ -132,4 +132,62 @@ function getNews(url){
 		});
 	});
 }
+
+/*const searchFrom = document.querySelector('.search'); 
+				const input = document.querySelector('.input');
+				const newsList = document.querySelector('.news-list');
+				
+				searchFrom.addEventListener('submit', getNews);
+				
+				function getNews(e){
+					const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
+					let searchedFor = input.value; 
+					console.log(searchedFor);
+				}
+				
+				//this function takes in the category and search keywords in order to get a list of 
+				 function getNews(category, search) {
+				}
+				var url = 'https://newsapi.org/v2/everything?' +
+          				'q=Apple&' +
+          				'from=2020-10-30&' +
+          				'sortBy=popularity&' +
+          				'apiKey=78b9d599c4f94f8fa3afb1a5458928d6';
+
+				var req = new Request(url);
+				var jsonStr;
+				var myArticles
+
+				
+				var myArticles = jsonStr[0];
+				var mainContainer = document.getElementById("myData");
+				for ( var i in myArticles) {
+					var div = document.createElement("div");
+					div.innerHTML = articles[i].title;
+					mainContainer.appendChild(div);
+				}*/
+				
+				
+				/*function myFunction() {
+					fetch(req)
+    					.then(function(response) {
+						response.json().then(data => {
+							console.log(data); 
+							//var obj = JSON.parse(data)
+							var myArticles = obj[2]; 
+							var toAdd; 
+							var mainContainer = document.getElementById("myData");
+							for (var i in myArticles) {
+								var div = document.createElement("div");
+								div.innerHTML = articles[i].title;
+								mainContainer.appendChild(div);
+							}
+  							// do something with your data
+						});
+						//jsonStr = response.json().then(function(json) {
+      							// process your JSON further
+						//}); 
+        					//console.log(jsonStr);
+   				 	})
+				}*/
 				
