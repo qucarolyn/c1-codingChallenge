@@ -120,12 +120,14 @@ function getNews(url){
 			data.articles.forEach(article => {
 				document.createElement('li');
 				let li = document.createElement('li');
+				let articleDiv = document.createElement('div'); 
+				
 				if(article.title != 'null') {
 					let a = document.createElement('a');
 					a.setAttribute('href', article.url);
 					a.setAttribute('target', '_blank');
 					a.textContent = article.title;
-					li.appendChild(a);
+					div.appendChild(a);
 				}
 				
 				let img = document.createElement('img');
@@ -135,7 +137,7 @@ function getNews(url){
 				} else {
 					img.src = article.urlToImage; //need to fix later
 				}
-				li.appendChild(img);
+				articleDiv.appendChild(img);
 
 				let src = ''; 
 				if (article.source.name != 'null') {
@@ -155,6 +157,8 @@ function getNews(url){
 					info.textContent = src + auth;
 					li.appendChild(info);
 				}*/
+				
+				li.appendChild(div); 
 								   
 				newsList.appendChild(li);
 								
