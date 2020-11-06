@@ -68,24 +68,19 @@ function getSearch(e){
 	}
 	
 	let sortPage = sortBy.value;
-	if(sortPage == 'choose') { //handles no search category 
+	if(sortPage == 'choose') { //handles the result sort option
 		sortPage = 'relevancy';
-	}
-	
-	   
+	}else {
+		var url = 'https://newsapi.org/v2/top-headlines?' +
+		    'sortBy=' + sortPage + '&' +
+		    'category=' + searchCategory + '&' + 
+		    'q=' + searchedFor + '&' + 
+		    'apiKey=' + apiKey; 
+		console.log(url); 
+		getNews(url);	
+	}   
 	console.log(searchedFor);
-				
-	var url = 'https://newsapi.org/v2/top-headlines?' +
-	    //'country=us&' + 
-	    'sortBy=' + sortPage + '&' +
-	    'category=' + searchCategory + '&' + 
-	    'q=' + searchedFor + '&' + 
-	    'apiKey=' + apiKey; 
-	
-	console.log(url); 
-	
-	getNews(url);
-	
+			
 }
 
 function getNews(url){
@@ -95,7 +90,7 @@ function getNews(url){
 		response.json().then(data => {
 			console.log(data);
 			if(data.totalResults == 0) {
-				newsList.innerHTML = 'Could not find any results. Please try again!';
+				document.getElementById("noCategory").style.display = "block";
 			}
 			
 			data.articles.forEach(article => {
