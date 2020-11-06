@@ -1,1 +1,79 @@
+body {
+    margin: 60px auto;
+    width: 70%;
+}
+
+topnav {
+    display: inline;
+}
+
+topnav p{
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.5em; 
+    display: inline;
+}
+
+topnav button {
+    display: inline; 
+    color: white; 
+    text-align: center; 
+    margin: 0px;
+    padding: 10px 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+
+news-list li div{
+    width: 300px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+    
+}
+
+news-list li div img{
+    width: 100px;
+    height: 100px
+    padding: 50px;
+    margin: 20px;
+    
+}
+
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
 
