@@ -69,10 +69,10 @@ function clear(e){
 }
 
 function update_page(clicked) {
-	document.getElementById('home').style.backgroundColor="grey";
-	document.getElementById('top_entertainment').style.backgroundColor="grey";
-	document.getElementById('top_sports').style.backgroundColor="grey";
-	document.getElementById('top_technology').style.backgroundColor="grey";
+	document.getElementById("home").style.backgroundColor="grey";
+	document.getElementById("top_entertainment").style.backgroundColor="grey";
+	document.getElementById("top_sports").style.backgroundColor="grey";
+	document.getElementById("top_technology").style.backgroundColor="grey";
 	
 	document.getElementById(clicked).style.backgroundColor="blue";
 }
