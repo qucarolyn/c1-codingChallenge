@@ -124,7 +124,7 @@ function getNews(url){
 				}
 				
 				let info = document.createElement('p');
-				info.textContent = article.date + '| Source: ' + article.source.name + ' | Author: ' + article.author;
+				info.textContent = article.publishedAt + '| Source: ' + article.source.name + ' | Author: ' + article.author;
 								
 				/*if(src + auth != '') {
 					let info = document.createElement('p');
