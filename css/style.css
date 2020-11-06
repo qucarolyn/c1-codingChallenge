@@ -8,7 +8,11 @@ topnav {
 }
 
 topnav button {
-    color: 'grey';
+    color: "grey";
+}
+
+#home {
+    color: #35A1DF'
 }
 
 footer ul {
