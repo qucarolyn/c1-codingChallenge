@@ -8,7 +8,7 @@ topnav {
 }
 
 topnav button {
-    color: "grey";
+    color: grey;
 }
 
 #home {
@@ -21,17 +21,21 @@ footer ul {
     list-style: none;
     font-weight: bold;
 }
+
 footer ul li {
     display: inline;
     margin-right: 20px;
 }
+
 a {
     text-decoration: none;
     color: #999;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -46,10 +50,29 @@ footer {
     font-size: .8em;
 }
 
+news-list ul li div{
+    width: 300px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+    
+}
+
+news-list ul li img{
+    width: 300px;
+    border: 1px solid grey;
+    padding: 50px;
+    margin: 20px;
+    
+}
+
+
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
 }
+
 
 ul.posts li {
     list-style: none;
