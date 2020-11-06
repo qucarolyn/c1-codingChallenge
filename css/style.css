@@ -2,6 +2,11 @@ body {
     margin: 60px auto;
     width: 70%;
 }
+
+topnav {
+    display: inline;
+}
+
 footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
