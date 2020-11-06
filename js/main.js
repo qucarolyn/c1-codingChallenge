@@ -75,7 +75,13 @@ function update_page(clicked) {
 	document.getElementById("top_sports").style.backgroundColor="grey";
 	document.getElementById("top_technology").style.backgroundColor="grey";
 	
+	document.getElementById("home").style.color="black";
+	document.getElementById("top_entertainment").style.color="black";
+	document.getElementById("top_sports").style.color="black";
+	document.getElementById("top_technology").style.color="black";
+	
 	document.getElementById(clicked).style.backgroundColor= "rgb(53, 161, 223)";
+	document.getElementById(clicked).style.color= "white";
 }
 
 function getSearch(e){
