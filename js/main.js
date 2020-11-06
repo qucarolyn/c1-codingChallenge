@@ -78,6 +78,7 @@ function update_page(clicked) {
 }
 
 function getSearch(e){
+	update_page('home');
 	newsList.innerHTML = '';
 	e.preventDefault(); 			
 				
