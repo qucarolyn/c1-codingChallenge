@@ -6,6 +6,7 @@ const sortBy = document.getElementById("sortBy");
 const newsList = document.querySelector('.news-list');
 var currPage = document.getElementById("home"); 
 
+update_page('home');
 searchFrom.addEventListener('submit', getSearch);
 				
 document.getElementById("top_entertainment").addEventListener('click' , top_e);
