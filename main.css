@@ -16,6 +16,7 @@ body {
 .topnav button {
     display: inline; 
     color: white; 
+    border: none; 
     text-align: center; 
     margin: 0px;
     padding: 10px 30px;
