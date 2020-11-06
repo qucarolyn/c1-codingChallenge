@@ -4,15 +4,17 @@ const input = document.querySelector('.input');
 const category = document.getElementById("category");
 const sortBy = document.getElementById("sortBy");
 const newsList = document.querySelector('.news-list');
+var currPage = document.getElementById("home"); 
 
 searchFrom.addEventListener('submit', getSearch);
 				
 document.getElementById("top_entertainment").addEventListener('click' , top_e);
 document.getElementById("top_sports").addEventListener('click' , top_s);
 document.getElementById("top_technology").addEventListener('click' , top_t);
-document.getElementById("top_technology").addEventListener('click' , clear);
+document.getElementById("home").addEventListener('click' , clear);
 
 function top_e(e) {
+	update_page('entertainment');
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
@@ -27,6 +29,7 @@ function top_e(e) {
 }
 
 function top_s(e) {
+	update_page('sports');
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
@@ -41,6 +44,7 @@ function top_s(e) {
 }
 
 function top_t(e) {
+	update_page('technology');
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
@@ -55,11 +59,22 @@ function top_t(e) {
 }
 
 function clear(e){
+	update_page('technology');
+	
 	while(newsList.hasChildNodes()){
 		newsList.removeChild('li');
 	}
 	//newsList.innerHTML = '';
 	//e.preventDefault();
+}
+
+function update_page(clicked) {
+	document.getElementById("home").style.backgroundColor("grey");
+	document.getElementById("top_entertainment").style.backgroundColor("grey");
+	document.getElementById("top_sports").style.backgroundColor("grey");
+	document.getElementById("top_technology").style.backgroundColor("grey");
+	
+	document.getElementById(clicked).style.backgroundColor("blue");
 }
 
 function getSearch(e){
