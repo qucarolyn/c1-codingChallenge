@@ -76,7 +76,7 @@ function getSearch(e){
 	console.log(searchedFor);
 				
 	var url = 'https://newsapi.org/v2/top-headlines?' +
-	    'country=us&' + 
+	    //'country=us&' + 
 	    'sortBy=' + sortPage + '&' +
 	    'category=' + searchCategory + '&' + 
 	    'q=' + searchedFor + '&' + 
