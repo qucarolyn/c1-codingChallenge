@@ -136,10 +136,13 @@ function getNews(url){
 				
 				let img = document.createElement('img');
 				img.alt = "Icon for article";
+				img.width = "300";
+				img.height = "300";
+
 				if(article.img != 'null') {
 					img.src = article.urlToImage; 
 				} else {
-					img.src = article.urlToImage; //need to fix later
+					img.src = "images/noImage.png"; //need to fix later
 				}
 				articleDiv.appendChild(img);
 
