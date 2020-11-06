@@ -114,12 +114,15 @@ function getNews(url){
 	fetch(req).then(function(response) {
 		response.json().then(data => {
 			console.log(data);
+			let results = document.createElement('p'); 
+			results.textContent = "Results: " + data.totalResults; 
+			category.appendChild(results);
+			
 			if(data.totalResults == 0) {
 				newsList.innerHTML = 'Could not find any results. Please adjust your search!';
-			}
+			}else
 			
 			data.articles.forEach(article => {
-				document.createElement('li');
 				let li = document.createElement('li');
 				let articleDiv = document.createElement('div'); 
 				
