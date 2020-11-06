@@ -2,6 +2,7 @@ const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
 const searchFrom = document.querySelector('.search'); 
 const input = document.querySelector('.input');
 const category = document.getElementById("category");
+const sortBy = document.getElementById("sortBy");
 const newsList = document.querySelector('.news-list');
 
 searchFrom.addEventListener('submit', getSearch);
@@ -62,13 +63,21 @@ function getSearch(e){
 	let searchedFor = input.value;
 	
 	let searchCategory = category.value; 		
-	if(searchCategory == 'choose') {
+	if(searchCategory == 'choose') { //handles no search category 
 		searchCategory = 'sports';
 	}
+	
+	let sortPage = sortBy.value;
+	if(sortPage == 'choose') { //handles no search category 
+		sortPage = 'relevancy';
+	}
+	
+	   
 	console.log(searchedFor);
 				
 	var url = 'https://newsapi.org/v2/top-headlines?' +
 	    'country=us&' + 
+	    'sortBy=' + sortPage + '&' +
 	    'category=' + searchCategory + '&' + 
 	    'q=' + searchedFor + '&' + 
 	    'sortBy=popularity&' +
