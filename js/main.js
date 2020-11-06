@@ -138,6 +138,7 @@ function getNews(url){
 				img.alt = "Icon for article";
 				img.width = "300";
 				img.height = "300";
+				img.object-fit: "cover";
 
 				if(article.img != 'null') {
 					img.src = article.urlToImage; 
