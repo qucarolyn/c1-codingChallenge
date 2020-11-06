@@ -16,6 +16,7 @@ function top_e(e) {
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
+	sortBy.value = '';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
@@ -29,6 +30,7 @@ function top_s(e) {
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
+	sortBy.value = '';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
@@ -42,6 +44,7 @@ function top_t(e) {
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
+	sortBy.value = '';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
@@ -70,7 +73,11 @@ function getSearch(e){
 		document.getElementById("noCategory").style.display = "block";
 	}else {
 		document.getElementById("noCategory").style.display = "none";
+		if(sortBy.value = 'choose') {
+			sortBy.value = 'relevancy'; 
+		}
 		let sortPage = sortBy.value;
+		
 		var url = 'https://newsapi.org/v2/top-headlines?' +
 		    'sortBy=' + sortPage + '&' +
 		    'category=' + searchCategory + '&' + 
