@@ -122,12 +122,15 @@ function getNews(url){
 				if (article.author != 'null') {
 					' | Author: ' + article.author;
 				}
+				
+				let info = document.createElement('p');
+				info.textContent = article.date + '| Source: ' + article.source.name + ' | Author: ' + article.author;
 								
-				if(src + auth != '') {
+				/*if(src + auth != '') {
 					let info = document.createElement('p');
 					info.textContent = src + auth;
 					li.appendChild(info);
-				}
+				}*/
 								   
 				newsList.appendChild(li);
 								
