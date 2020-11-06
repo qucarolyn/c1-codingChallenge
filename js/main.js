@@ -14,7 +14,7 @@ document.getElementById("top_technology").addEventListener('click' , top_t);
 document.getElementById("home").addEventListener('click' , clear);
 
 function top_e(e) {
-	update_page('entertainment');
+	update_page('top_entertainment');
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
@@ -29,7 +29,7 @@ function top_e(e) {
 }
 
 function top_s(e) {
-	update_page('sports');
+	update_page('top_sports');
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
@@ -44,7 +44,7 @@ function top_s(e) {
 }
 
 function top_t(e) {
-	update_page('technology');
+	update_page('top_technology');
 	newsList.innerHTML = '';
 	e.preventDefault();
 	input.value = '';
@@ -59,7 +59,7 @@ function top_t(e) {
 }
 
 function clear(e){
-	update_page('technology');
+	update_page('home');
 	
 	while(newsList.hasChildNodes()){
 		newsList.removeChild('li');
