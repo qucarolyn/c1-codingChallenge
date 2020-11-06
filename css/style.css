@@ -14,13 +14,13 @@ topnav p{
 }
 
 topnav button {
-    display: inline
-    color: grey;
+    display: inline; 
+    color: white; 
+    text-align: center; 
+    margin: 0px;
+    padding: 10px 30px;
 }
 
-#home {
-    color: #35A1DF'
-}
 
 footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
