@@ -60,9 +60,9 @@ news-list ul li div{
     
 }
 
-news-list ul li img{
-    width: 300px;
-    border: 1px solid grey;
+news-list ul li div img{
+    width: 100px;
+    height: 100px
     padding: 50px;
     margin: 20px;
     
