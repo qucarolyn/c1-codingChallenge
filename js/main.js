@@ -80,7 +80,6 @@ function getSearch(e){
 	    'sortBy=' + sortPage + '&' +
 	    'category=' + searchCategory + '&' + 
 	    'q=' + searchedFor + '&' + 
-	    'sortBy=popularity&' +
 	    'apiKey=' + apiKey; 
 	
 	console.log(url); 
