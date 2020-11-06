@@ -43,7 +43,7 @@ p {
 }
 
 .news-list li div{
-    width: 300px;
+    width: 1000px;
     border: 1px solid grey;
     border-radius: 8px;
     padding: 10px;
@@ -56,6 +56,7 @@ p {
     height: 100px;
     padding: 50px;
     margin: 20px;
+    object-fit: cover; 
     
 }
 
