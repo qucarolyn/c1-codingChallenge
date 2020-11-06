@@ -7,7 +7,12 @@ topnav {
     display: inline;
 }
 
+topnav p{
+    display: inline;
+}
+
 topnav button {
+    display: inline
     color: grey;
 }
 
