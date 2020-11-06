@@ -73,7 +73,7 @@ function getSearch(e){
 		document.getElementById("noCategory").style.display = "block";
 	}else {
 		document.getElementById("noCategory").style.display = "none";
-		if(sortBy.value = 'choose') {
+		if(sortBy.value == 'choose') {
 			sortBy.value = 'relevancy'; 
 		}
 		let sortPage = sortBy.value;
