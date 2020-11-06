@@ -26,25 +26,29 @@
 				<p>Search for entertainment, sports, and technology news  </p>
     		</div>
 		
-		<form class="search" action=""> 
-			<!-- <label for="">News</label> -->
-			<input class="input" type="text"/>
-			<select name="category" id="category">	
-				<option value="choose">Choose a category...</option>
- 				<option value="entertainment">Entertainment</option>
-  				<option value="sports">Sports</option>
-  				<option value="technology">Technology</option>
-			</select>
+		<div class="searchMenu">
+			<form class="search" action=""> 
+				<input class="input" type="text"/>
+				<select name="category" id="category">	
+					<option value="choose">Choose a category...</option>
+ 					<option value="entertainment">Entertainment</option>
+  					<option value="sports">Sports</option>
+  					<option value="technology">Technology</option>
+				</select>
 			
-			<select name="category" id="sortBy">	
-				<option value="choose">Sort By... </option>
- 				<option value="relevancy">Relevancy (default)</option>
-  				<option value="popularity">Source Popularity</option>
-  				<option value="publishedAt">Date (newest to oldest)</option>
-			</select>
+				<select name="category" id="sortBy">	
+					<option value="choose">Sort By... </option>
+ 					<option value="relevancy">Relevancy (default)</option>
+  					<option value="popularity">Source Popularity</option>
+  					<option value="publishedAt">Date (newest to oldest)</option>
+				</select>
 			
-			<input type="submit" value="Go!"/>
-		</form>
+				<input type="submit" value="Go!"/>
+			</form>
+			<p id="noCategory" hidden> Please specify a category <p>
+		</div>
+		
+		
 		
 		<div class="container">
 			<ul class="news-list"></ul>
