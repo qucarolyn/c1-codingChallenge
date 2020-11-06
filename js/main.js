@@ -127,7 +127,7 @@ function getNews(url){
 					a.setAttribute('href', article.url);
 					a.setAttribute('target', '_blank');
 					a.textContent = article.title;
-					div.appendChild(a);
+					articleDiv.appendChild(a);
 				}
 				
 				let img = document.createElement('img');
@@ -158,7 +158,7 @@ function getNews(url){
 					li.appendChild(info);
 				}*/
 				
-				li.appendChild(div); 
+				li.appendChild(articleDiv); 
 								   
 				newsList.appendChild(li);
 								
