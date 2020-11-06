@@ -146,7 +146,7 @@ function getNews(url){
 				img.height = "300";
 				img.object-fit= "cover";*/
 
-				if(article.src.urlToImage == null) {
+				if(article.urlToImage == null) {
 					img.src = "images/noImage.png"; 
 				} else {
 					img.src = article.urlToImage;
