@@ -15,7 +15,7 @@ document.getElementById("top_technology").addEventListener('click' , clear);
 function top_e(e) {
 	newsList.innerHTML = '';
 	e.preventDefault();
-	input.value = 'Everything';
+	input.value = '';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
@@ -28,7 +28,7 @@ function top_e(e) {
 function top_s(e) {
 	newsList.innerHTML = '';
 	e.preventDefault();
-	input.value = 'Everything';
+	input.value = '';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
@@ -41,7 +41,7 @@ function top_s(e) {
 function top_t(e) {
 	newsList.innerHTML = '';
 	e.preventDefault();
-	input.value = 'Everything';
+	input.value = '';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
