@@ -58,6 +58,7 @@ body {
 }
 
 .news-list li div div{
+    min-height: 300px;
     display: inline;
     width: 600px;
     border: none;
