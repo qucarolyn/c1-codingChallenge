@@ -62,7 +62,7 @@ body {
     width: 600px;
     border: none;
     padding: 0px;
-    margin: 5px 5px, 5px, 5px;
+    margin: 5px;
     
 }
 
@@ -72,6 +72,7 @@ body {
     text-decoration: underline;
     font-style: bold;
     padding: 5px;
+    margin: 0px;
 }
 
 .news-list li div div p{
@@ -79,6 +80,7 @@ body {
     font-size: 12px;
     width: 600px; 
     padding: 5px;
+    margin: 0px;
 }
 
 .news-list li div div .preview{ 
@@ -87,6 +89,7 @@ body {
     font-size: 12px; 
     width: 600px; 
     padding: 5px;
+    margin: 0px;
 }
 
 .news-list li div img{
