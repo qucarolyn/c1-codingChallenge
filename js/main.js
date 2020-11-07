@@ -120,7 +120,7 @@ function getNews(url){
 	fetch(req).then(function(response) {
 		response.json().then(data => {
 			console.log(data);
-			let results = document.createElement('p'); 
+			let results = document.createElement('p');
 			results.textContent = "Results: " + data.totalResults; 
 			category.appendChild(results);
 			
@@ -143,18 +143,28 @@ function getNews(url){
 				}
 				
 
-				let src = ''; 
+				
+				let srcName = 'not available';
+				let srcAuthor = 'not available';
+				let srcDate = 'not available';
+				
 				if (article.source.name != null) {
-					src = 'Source: ' + article.source.name; 
+					srcName = article.source.name; 
 				}
 				
-				let auth = ''; 
-				if (article.author != null) {
-					' | Author: ' + article.author;
+				if (article.article != null) {
+					srcName = article.source.name; 
 				}
+				
+				if (article.publishedAt != null) {
+					srcDate = article.publishedAt; 
+				}
+				
+				let src = 'Source: ' + srcName + ' | Author: ' + srcAuthor + ' | Date: ' + srcDate; 
 				
 				let info = document.createElement('p');
-				info.textContent = article.publishedAt + '| Source: ' + article.source.name + ' | Author: ' + article.author;
+				info.classList.add("info");
+				info.textContent = src;
 				
 				let preview = document.createElement('p');
 				preview.classList.add("previewText");
