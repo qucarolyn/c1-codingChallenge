@@ -127,7 +127,7 @@ function getNews(url){
 			
 			data.articles.forEach(article => {
 				let li = document.createElement('li');
-				let articleContainer = document.createElement('container');
+				let articleDiv = document.createElement('div');
 				let articleText = document.createElement('div');//the text portion of the article 
 				
 				
@@ -182,10 +182,10 @@ function getNews(url){
 					console.log("success"); 
 				}
 				
-				articleContainer.appendChild(img);
-				articleContainer.appendChild(articleText);
+				articleDiv.appendChild(img);
+				articleDiv.appendChild(articleText);
 				
-				li.appendChild(articleContainer); 
+				li.appendChild(articleDiv); 
 								   
 				newsList.appendChild(li);				
 			})						
