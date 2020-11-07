@@ -178,7 +178,7 @@ function getNews(url){
 								
 				let img = document.createElement('img');
 				img.alt = "Icon for article";
-				if(article.urlToImage == "") {
+				if(article.urlToImage == null) {
 					img.src = "images/noImage.png"; 
 				} else {
 					img.src = article.urlToImage;
