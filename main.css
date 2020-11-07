@@ -1,4 +1,4 @@
-body {
+ntbody {
     margin: 60px auto;
     width: 70%;
 }
@@ -54,9 +54,7 @@ body {
     border-color: rgb(105, 192, 250);
     padding: 0px;  
     margin-top: 5px;
-    margin-bottom: 5px;
-    min-height: 300px;
-    
+    margin-bottom: 5px;    
 }
 
 .news-list li div div{
@@ -76,29 +74,29 @@ body {
     font-style: bold;
     padding: 5px;
     margin: 0px;
+    display:block;
 }
 
 .previewText{
-    /*display: inline; */
     color: grey;
     font-size: 12px;
     width: 600px; 
     padding: 5px;
     margin: 0px;
+    display:block;
 }
 
 .info{ 
-    /*display: inline; */
     color: black;
     font-size: 12px; 
     width: 600px; 
     padding: 5px;
     margin: 0px;
+    display:block;
 }
 
 .news-list li div img{
     float: left;
-    /*display: inline; */
     width: 150px;
     height: 150px;
     padding: 0px;
