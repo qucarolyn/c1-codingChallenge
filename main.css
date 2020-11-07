@@ -76,6 +76,12 @@ p {
     
 }
 
+.news-list li a{
+    color: black;
+    text-decoration: underline;
+    font-style: bold;
+}
+
 .news-list li div img{
     width: 100px;
     height: 100px;
