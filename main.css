@@ -47,6 +47,7 @@ body {
 }
 
 .news-list li div{
+    overflow:auto;
     width: 800px;
     border: 1px solid grey;
     border-radius: 5px;
@@ -54,6 +55,7 @@ body {
     padding: 0px;  
     margin-top: 5px;
     margin-bottom: 5px;
+    min-height: 200px;
     
 }
 
@@ -77,7 +79,7 @@ body {
 }
 
 .previewText{
-    display: inline;
+    /*display: inline; */
     color: grey;
     font-size: 12px;
     width: 600px; 
@@ -86,7 +88,7 @@ body {
 }
 
 .info{ 
-    display: inline;
+    /*display: inline; */
     color: black;
     font-size: 12px; 
     width: 600px; 
@@ -95,7 +97,8 @@ body {
 }
 
 .news-list li div img{
-    display: inline; 
+    float: left;
+    /*display: inline; */
     width: 150px;
     height: 150px;
     padding: 0px;
@@ -143,6 +146,3 @@ p {
     line-height: 1.4em;
     color: #333;
 }
-
-
-
