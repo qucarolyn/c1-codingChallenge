@@ -117,11 +117,11 @@ function getNews(url){
 	fetch(req).then(function(response) {
 		response.json().then(data => {
 			console.log(data);
-			let numRes = document.createElement('li');
+			/*let numRes = document.createElement('li');
 			let results = document.createElement('p');
 			results.textContent = "Results: " + data.totalResults; 
 			numRes.appendChild(results);
-			newsList.appendChild(numRes);
+			newsList.appendChild(numRes);*/
 			
 			if(data.totalResults == 0) {
 				newsList.innerHTML = 'Could not find any results. Please adjust your search!';
