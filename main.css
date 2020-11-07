@@ -46,7 +46,7 @@ body {
     padding: 0px;
 }
 
-.news-list li div{
+.news-list li container{
     overflow:auto;
     width: 800px;
     border: 1px solid grey;
@@ -55,11 +55,11 @@ body {
     padding: 0px;  
     margin-top: 5px;
     margin-bottom: 5px;
-    min-height: 200px;
+    min-height: 300px;
     
 }
 
-.news-list li div div{
+.news-list li container div{
     min-height: 300px;
     display: inline;
     width: 600px;
