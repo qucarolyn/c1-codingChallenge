@@ -182,8 +182,8 @@ function getNews(url){
 					console.log("success"); 
 				}
 				
-				articleDiv.appendChild(articleText);
 				articleDiv.appendChild(img);
+				articleDiv.appendChild(articleText);
 				
 				li.appendChild(articleDiv); 
 								   
