@@ -84,8 +84,9 @@ p {
     
 }
 
-.news-list li a{
+.news-list li div div a{
     color: black;
+    font-size: 1em; 
     text-decoration: underline;
     font-style: bold;
 }
