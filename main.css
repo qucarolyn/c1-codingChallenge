@@ -76,6 +76,7 @@ body {
 }
 
 .previewText{
+    display: inline;
     color: grey;
     font-size: 12px;
     width: 600px; 
@@ -84,7 +85,7 @@ body {
 }
 
 .info{ 
-    
+    display: inline;
     color: black;
     font-size: 12px; 
     width: 600px; 
