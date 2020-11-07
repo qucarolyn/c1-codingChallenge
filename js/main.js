@@ -1,4 +1,4 @@
-const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
+cconst apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
 const searchFrom = document.querySelector('.search'); 
 const input = document.querySelector('.input');
 const category = document.getElementById("category");
@@ -117,9 +117,11 @@ function getNews(url){
 	fetch(req).then(function(response) {
 		response.json().then(data => {
 			console.log(data);
+			let numRes = document.createElement('li');
 			let results = document.createElement('p');
 			results.textContent = "Results: " + data.totalResults; 
-			category.appendChild(results);
+			numRes.appendChild(results);
+			newsList.appendChild(numRes);
 			
 			if(data.totalResults == 0) {
 				newsList.innerHTML = 'Could not find any results. Please adjust your search!';
