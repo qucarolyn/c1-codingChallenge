@@ -159,7 +159,7 @@ function getNews(url){
 					srcDate = article.publishedAt; 
 				}
 				
-				let src = 'Source: ' + srcName + ' | Author: ' + srcAuthor + ' | Date: ' + srcDate; 
+				let src = 'Source: ' + srcName + '  | Author: ' + srcAuthor + '  | Date: ' + srcDate; 
 				
 				let info = document.createElement('p');
 				info.classList.add("info");
@@ -169,8 +169,9 @@ function getNews(url){
 				preview.classList.add("previewText");
 				if(article.decription == null) {
 					preview.textContent = 'No preview available';
+				}else {
+					preview.textContent = article.description;
 				}
-				preview.textContent = '' + article.description; 
 				
 				articleText.appendChild(info); 
 				articleText.appendChild(preview); 
