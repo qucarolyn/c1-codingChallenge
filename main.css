@@ -43,6 +43,7 @@ body {
 
 .news-list {
     list-style-type: none;
+    padding: 0px;
 }
 
 .news-list li div{
