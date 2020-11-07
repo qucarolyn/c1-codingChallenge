@@ -164,7 +164,7 @@ function getNews(url){
 				
 				let preview = document.createElement('p');
 				preview.classList.add("previewText");
-				if(article.decription == null) {
+				if(article.description == null) {
 					preview.textContent = 'No preview available';
 				}else {
 					preview.textContent = article.description;
