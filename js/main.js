@@ -150,7 +150,7 @@ function getNews(url){
 					img.src = "images/noImage.png"; 
 				} else {
 					img.src = article.urlToImage;
-					img.src = "images/noImage.png";
+					console.log("success"); 
 				}
 				articleDiv.appendChild(img);
 
