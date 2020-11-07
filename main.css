@@ -50,8 +50,9 @@ body {
     border: 1px solid grey;
     border-radius: 5px;
     border-color: rgb(105, 192, 250);
-    padding: 0px;
-    margin: 0px 5px, 10px, 5px;
+    padding: 0px;  
+    margin-top: 5px;
+    margin-bottom: 5px;
     
 }
 
