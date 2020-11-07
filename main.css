@@ -67,12 +67,20 @@ p {
 }
 
 .news-list li div{
-    width: 1000px;
+    width: 800px;
     border: 1px solid grey;
     border-radius: 5px;
     border-color: rgb(105, 192, 250);
     padding: 0px;
-    margin: 0px 5px, 0px, 5px;
+    margin: 0px 5px, 10px, 5px;
+    
+}
+
+.news-list li div div{
+    width: 600;
+    border: none;
+    padding: 0px;
+    margin: 5px 5px, 5px, 5px;
     
 }
 
@@ -83,8 +91,8 @@ p {
 }
 
 .news-list li div img{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     padding: 50px;
     margin: 20px;
     object-fit: cover; 
