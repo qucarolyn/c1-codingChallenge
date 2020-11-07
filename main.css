@@ -50,7 +50,7 @@ body {
 }
 
 .go {
-    background-color: rgb(105, 192, 250);
+    background-color: rgb(53, 161, 223);
     color: white; 
     border:none;
     padding:8px;
@@ -64,12 +64,12 @@ body {
 }
 
 .news-list li div{
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(245, 245, 245);
     overflow:auto;
     width: 800px;
     border: 1px solid grey;
     border-radius: 5px;
-    border-color: rgb(105, 192, 250);
+    border-color: rgb(53, 161, 223);
     padding: 0px;  
     margin-top: 5px;
     margin-bottom: 5px;    
@@ -86,7 +86,7 @@ body {
 }
 
 .news-list li div div a{
-    color: rgb(105, 192, 250);
+    color: rgb(53, 161, 223);
     font-size: 18px; 
     text-decoration: underline;
     font-style: bold;
