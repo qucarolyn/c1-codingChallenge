@@ -134,7 +134,7 @@ function getNews(url){
 				let articleText = document.createElement('div');//the text portion of the article 
 				
 				
-				if(article.title != 'null') {
+				if(article.title != null) {
 					let a = document.createElement('a');
 					a.setAttribute('href', article.url);
 					a.setAttribute('target', '_blank');
@@ -144,12 +144,12 @@ function getNews(url){
 				
 
 				let src = ''; 
-				if (article.source.name != 'null') {
+				if (article.source.name != null) {
 					src = 'Source: ' + article.source.name; 
 				}
 				
 				let auth = ''; 
-				if (article.author != 'null') {
+				if (article.author != null) {
 					' | Author: ' + article.author;
 				}
 				
