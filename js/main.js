@@ -63,7 +63,7 @@ function clear(e){
 	update_page('home');
 	
 	while(newsList.hasChildNodes()){
-		newsList.removeChild('li');
+		newsList.removeChild();
 	}
 	//newsList.innerHTML = '';
 	//e.preventDefault();
