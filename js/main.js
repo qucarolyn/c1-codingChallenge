@@ -62,10 +62,7 @@ function top_t(e) {
 function clear(e){
 	update_page('home');
 	
-	while(newsList.hasChildNodes()){
-		newsList.removeChild('li');
-	}
-	//newsList.innerHTML = '';
+	newsList.innerHTML = '';
 	//e.preventDefault();
 }
 
