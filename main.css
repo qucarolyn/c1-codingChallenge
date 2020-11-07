@@ -72,7 +72,7 @@ p {
     border-radius: 5px;
     border-color: rgb(105, 192, 250);
     padding: 0px;
-    margin: 0px;
+    margin: 0px 5px, 0px, 5px;
     
 }
 
