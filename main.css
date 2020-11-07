@@ -30,6 +30,12 @@ body {
     padding: 10px 30px;
 }
 
+.search.input {
+    padding: 10px; 
+    
+}
+
+
 a {
     text-decoration: none;
     color: #999;
