@@ -143,7 +143,6 @@ function getNews(url){
 				}
 				
 
-				
 				let srcName = 'not available';
 				let srcAuthor = 'not available';
 				let srcDate = 'not available';
