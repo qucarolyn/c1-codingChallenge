@@ -15,7 +15,7 @@ body {
     display: inline;
 }
 
-.topnav button:hover {
+.topnav button#home:hover {
     background-color: rgb(105, 192, 250); 
     color: white; 
     
