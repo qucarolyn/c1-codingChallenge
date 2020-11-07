@@ -75,13 +75,15 @@ body {
 
 .news-list li div div p{
     color: grey;
-    font-size: 12px; 
+    font-size: 12px;
+    width: 600; 
 }
 
-.news-list li div div .preview{
+.news-list li div div .preview{ 
     
     color: black;
     font-size: 12px; 
+    width: 600; 
 }
 
 .news-list li div img{
