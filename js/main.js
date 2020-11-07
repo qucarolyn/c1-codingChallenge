@@ -85,6 +85,7 @@ function update_page(clicked) {
 	
 	document.getElementById(clicked).style.backgroundColor= "rgb(53, 161, 223)";
 	document.getElementById(clicked).style.color= "white";
+	document.getElementById("noCategory").style.display = "none";
 }
 
 function getSearch(e){
