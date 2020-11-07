@@ -6,6 +6,7 @@ body {
 .topnav {
     display: inline;
     color: grey; 
+    background-color: white;
 }
 
 .topnav p{
@@ -36,12 +37,34 @@ body {
     color: red;
 }
 
+.search #category{
+    height: 30px;
+    min-width: 160px;
+    margin: 2px;
+}
+
+.search #sortBy{
+    height: 30px;
+    margin: 2px;
+    min-width: 180px;
+}
+
+.go {
+    background-color: rgb(105, 192, 250);
+    color: white; 
+    border:none;
+    padding:8px;
+    width: 120px;
+    margin: 2px;
+}
+
 .news-list {
     list-style-type: none;
     padding: 0px;
 }
 
 .news-list li div{
+    background-color: rgb(240, 240, 240);
     overflow:auto;
     width: 800px;
     border: 1px solid grey;
@@ -63,8 +86,8 @@ body {
 }
 
 .news-list li div div a{
-    color: blue;
-    font-size: 16px; 
+    color: rgb(105, 192, 250);
+    font-size: 18px; 
     text-decoration: underline;
     font-style: bold;
     padding: 5px;
@@ -75,27 +98,6 @@ body {
 .input{
     padding: 5px;
     min-width: 300px;
-}
-
-.search #category{
-    height: 30px;
-    min-width: 160px;
-    margin: 2px;
-}
-
-.search #sortBy{
-    height: 30px;
-    margin: 2px;
-    min-width: 180px;
-}
-
-.go {
-    background-color: rgb(105, 192, 250);
-    color: white; 
-    border:none;
-    padding:8px;
-    width: 120px;
-    margin: 2px;
 }
 
 .previewText{
