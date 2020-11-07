@@ -160,11 +160,11 @@ function getNews(url){
 				
 				let src = 'Source: ' + srcName + '  | Author: ' + srcAuthor + '  | Date: ' + srcDate; 
 				
-				let info = document.createElement('p');
+				let info = document.createElement('span');
 				info.classList.add("info");
 				info.textContent = src;
 				
-				let preview = document.createElement('p');
+				let preview = document.createElement('span');
 				preview.classList.add("previewText");
 				if(article.description == null) {
 					preview.textContent = 'No text preview available';
