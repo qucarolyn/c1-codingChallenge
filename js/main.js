@@ -130,29 +130,18 @@ function getNews(url){
 			
 			data.articles.forEach(article => {
 				let li = document.createElement('li');
-				let articleDiv = document.createElement('div'); 
+				let articleDiv = document.createElement('div');
+				let articleText = document.createElement('div');//the text portion of the article 
+				
 				
 				if(article.title != 'null') {
 					let a = document.createElement('a');
 					a.setAttribute('href', article.url);
 					a.setAttribute('target', '_blank');
 					a.textContent = article.title;
-					articleDiv.appendChild(a);
+					articleText.appendChild(a);
 				}
 				
-				let img = document.createElement('img');
-				img.alt = "Icon for article";
-				/*img.width = "300";
-				img.height = "300";
-				img.object-fit= "cover";*/
-
-				if(article.urlToImage == 'null') {
-					img.src = "images/noImage.png"; 
-				} else {
-					img.src = article.urlToImage;
-					console.log("success"); 
-				}
-				articleDiv.appendChild(img);
 
 				let src = ''; 
 				if (article.source.name != 'null') {
@@ -166,17 +155,29 @@ function getNews(url){
 				
 				let info = document.createElement('p');
 				info.textContent = article.publishedAt + '| Source: ' + article.source.name + ' | Author: ' + article.author;
+				
+				let preview = document.createElement('p');
+				preview.classList.add("previewText");
+				preview.textContent = '' + article.description; 
+				
+				articleText.appendChild(info); 
+				articleText.appendChild(preview); 
 								
-				/*if(src + auth != '') {
-					let info = document.createElement('p');
-					info.textContent = src + auth;
-					li.appendChild(info);
-				}*/
+				let img = document.createElement('img');
+				img.alt = "Icon for article";
+				if(article.urlToImage == "") {
+					img.src = "images/noImage.png"; 
+				} else {
+					img.src = article.urlToImage;
+					console.log("success"); 
+				}
+				
+				articleDiv.appendChild(articleText);
+				articleDiv.appendChild(img);
 				
 				li.appendChild(articleDiv); 
 								   
-				newsList.appendChild(li);
-								
+				newsList.appendChild(li);				
 			})						
 		});
 	});
