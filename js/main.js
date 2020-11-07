@@ -18,8 +18,9 @@ function top_e(e) {
 	update_page('top_entertainment');
 	newsList.innerHTML = '';
 	e.preventDefault();
-	input.value = '';
-	sortBy.value = 'choose';
+	input.value = "Top news in";
+	category.value = 'entertainment';
+	sortBy.value = 'relevancy';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
@@ -33,8 +34,9 @@ function top_s(e) {
 	update_page('top_sports');
 	newsList.innerHTML = '';
 	e.preventDefault();
-	input.value = '';
-	sortBy.value = 'choose';
+	input.value = "Top news in";
+	category.value = 'sports';
+	sortBy.value = 'relevancy';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
@@ -48,8 +50,9 @@ function top_t(e) {
 	update_page('top_technology');
 	newsList.innerHTML = '';
 	e.preventDefault();
-	input.value = '';
-	sortBy.value = 'choose';
+	input.value = "Top news in";
+	category.value = 'technology';
+	sortBy.value = 'relevancy';
 	
 	var url = 'https://newsapi.org/v2/top-headlines?' + 
 	    'country=us&' + 
@@ -61,6 +64,9 @@ function top_t(e) {
 
 function clear(e){
 	update_page('home');
+	input.value = '';
+	category.value = 'choose';
+	sortBy.value = 'choose';
 	
 	newsList.innerHTML = '';
 	//e.preventDefault();
