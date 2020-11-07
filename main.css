@@ -75,7 +75,7 @@ body {
     margin: 0px;
 }
 
-.news-list li div div p{
+.previewText{
     color: grey;
     font-size: 12px;
     width: 600px; 
@@ -83,7 +83,7 @@ body {
     margin: 0px;
 }
 
-.news-list li div div .preview{ 
+.preview{ 
     
     color: black;
     font-size: 12px; 
