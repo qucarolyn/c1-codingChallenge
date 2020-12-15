@@ -1,4 +1,4 @@
-const apiKey = '78b9d599c4f94f8fa3afb1a5458928d6';
+const apiKey = '0c8eb80d57034257ac618f8fe5a5fc93';
 const searchFrom = document.querySelector('.search'); 
 const input = document.querySelector('.input');
 const category = document.getElementById("category");
